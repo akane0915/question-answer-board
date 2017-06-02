@@ -4,13 +4,16 @@
 
 #### By _**Asia Kane**_
 
-![Homepage](img/screenshot.png)
+![Homepage](img/homepage.png)
+![Homepage](img/questionpage.png)
 
 ## Description
 
 As a developer, have you ever found yourself in a situation where you are stuck and need help?  Good news is that the development community is full of people more than willing to lend a hand.  This application makes it convenient and quick for developers to reach out to the development community for help.  It allows the user to submit a coding question and then allows other developers to post answers to that question!
 
-This app is written in Ember with Ember Data stored in Firebase.  There is complete CRUD functionality for both Questions and Answers (with the exception of updating an answer).  The application structure is outlined below.  The relationship between Question and Answers is one-to-many.
+This app is written in Ember with Ember Data stored in Firebase.  There is complete CRUD functionality for both Questions and Answers (with the exception of updating an answer).  The relationship between Question and Answers is one-to-many. The app allows you to vote thumbs up or thumbs down for an answer.
+
+The application structure is outlined below.  
 
 Models:
   1. Question

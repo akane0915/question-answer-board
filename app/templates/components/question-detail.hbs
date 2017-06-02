@@ -15,14 +15,18 @@
   <div class="col-md-6">
     <h3>Answers:</h3><br>
       {{#each question.answers as |answer|}}
-      <p>{{answer.content}}</p>
-      <p>Posted by: {{answer.author}}</p>
-      <p>Number of Thumbs Up: {{answer.thumbsUp}}</p>
-      <p>Number of Thumbs Down: {{answer.thumbsDown}}</p>
-      <button class="btn btn-default" {{action 'thumbsUp' answer}}>Thumbs Up</button>
-      <button class="btn btn-default" {{action 'thumbsDown' answer}}>Thumbs Down</button><br><br>
-      <button class="btn btn-danger" {{action 'deleteAnswer' answer}}>Delete Answer</button>
-      <hr>
+        <p>{{answer.content}}</p>
+
+        <p>Answer Rating: <img class="thumb-button" src="/img/thumbs-up.jpg"/> {{answer.thumbsUp}} <img class="thumb-button" src="/img/thumbs-down.jpg"/> {{answer.thumbsDown}}</p>
+
+        <p>Posted by: {{answer.author}}</p>
+
+        <button class="btn btn-default" {{action 'thumbsUp' answer}}><img class="thumb-button" src="/img/thumbs-up.jpg"/></button>
+
+        <button class="btn btn-default" {{action 'thumbsDown' answer}}><img class="thumb-button" src="/img/thumbs-down.jpg"/></button><br><br>
+
+        <button class="btn btn-danger" {{action 'deleteAnswer' answer}}>Delete Answer</button>
+        <hr>
       {{/each}}
   </div>
 </div>
