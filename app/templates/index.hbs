@@ -1,8 +1,8 @@
 <h2>Welcome to Ask-It!</h2>
 <h4>Post a Question or Answer below.</h4>
-{{new-question}}
+{{new-question saveQuestion="saveQuestion"}}
 {{#each model.questions as |question|}}
   <p>{{question.content}}</p>
-  <p>- {{question.answer}}</p>
+  <p>- {{question.author}}</p>
   <hr>
 {{/each}}
