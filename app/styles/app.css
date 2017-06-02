@@ -1,0 +1,13 @@
+.jumbotron {
+  min-height: 400px;
+  background-image: url('/img/jumbotron.png');
+  font-family: 'Roboto';
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  text-align: center;
+}

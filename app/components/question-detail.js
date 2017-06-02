@@ -25,6 +25,14 @@ export default Ember.Component.extend({
       if (confirm('Are you sure you want to delete this answer?')) {
         this.sendAction('destroyAnswer', answer, question);
       }
+    },
+
+    thumbsUp(answer) {
+      this.sendAction('thumbsUp', answer);
+    },
+
+    thumbsDown(answer) {
+      this.sendAction('thumbsDown', answer);
     }
   }
 });

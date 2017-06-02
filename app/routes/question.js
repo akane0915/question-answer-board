@@ -34,6 +34,20 @@ export default Ember.Route.extend({
     destroyAnswer(answer, question) {
       answer.destroyRecord();
       this.transitionTo('question', question)
+    },
+
+    thumbsUp(answer) {
+      var numberOfThumbsUp = answer.get('thumbsUp') + 1;
+      answer.set('thumbsUp', numberOfThumbsUp);
+      answer.save();
+      this.transitionTo('question', question)
+    },
+
+    thumbsDown(answer) {
+      var numberOfThumbsDown = answer.get('thumbsDown') + 1;
+      answer.set('thumbsDown', numberOfThumbsDown);
+      answer.save();
+      this.transitionTo('question', question)
     }
   }
 });

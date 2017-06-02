@@ -1,4 +1,4 @@
-<h2>Help this developer answer the question!</h2><hr>
+<h2>Help to solve this question!</h2><hr>
 
 <div class="row">
   <div class="col-md-6">
@@ -7,6 +7,7 @@
     <p>Notes: {{question.notes}}</p>
 
     {{update-question question=question updateQuestion="updateQuestion"}}<br>
+    {{new-answer saveAnswer="saveAnswer" question=question}}
 
     <button class="btn btn-danger" {{action 'deleteQuestion' question}}>Delete Question</button>
   </div>
@@ -16,9 +17,12 @@
       {{#each question.answers as |answer|}}
       <p>{{answer.content}}</p>
       <p>Posted by: {{answer.author}}</p>
+      <p>Number of Thumbs Up: {{answer.thumbsUp}}</p>
+      <p>Number of Thumbs Down: {{answer.thumbsDown}}</p>
+      <button class="btn btn-default" {{action 'thumbsUp' answer}}>Thumbs Up</button>
+      <button class="btn btn-default" {{action 'thumbsDown' answer}}>Thumbs Down</button><br><br>
       <button class="btn btn-danger" {{action 'deleteAnswer' answer}}>Delete Answer</button>
       <hr>
       {{/each}}
-      {{new-answer saveAnswer="saveAnswer" question=question}}
   </div>
 </div>

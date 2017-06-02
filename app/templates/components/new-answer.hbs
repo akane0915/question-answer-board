@@ -1,20 +1,21 @@
 {{#if addNewAnswer}}
-  <h3>Post an Answer Below</h3>
-  <div>
-    <form>
-      <div class="form-group">
-        <label for="content">Answer:</label>
-        {{textarea class="form-control" value=content id="content"}}
-      </div>
-      <div class="form-group">
-        <label for="author">Author:</label>
-        {{input class="form-control" value=author id="author"}}
-      </div>
+  <div class="well">
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="content">Answer:</label>
+          {{textarea class="form-control" value=content id="content"}}
+        </div>
+        <div class="form-group">
+          <label for="author">Author:</label>
+          {{input class="form-control" value=author id="author"}}
+        </div>
 
-      <button class="btn btn-success" {{action 'saveAnswer'}}>Save Answer</button>
-    </form>
+        <button class="btn btn-success" {{action 'saveAnswer'}}>Save Answer</button>
+      </form>
+    </div>
   </div>
 {{else}}
-  <button class="btn btn-info" {{action 'showAnswerForm'}}>Post an Answer</button>
+<button class="btn btn-info" {{action 'showAnswerForm'}}>Post an Answer</button>
 {{/if}}
 <hr>
