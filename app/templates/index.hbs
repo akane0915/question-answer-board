@@ -3,7 +3,7 @@
 {{new-question saveQuestion="saveQuestion"}}
 {{#each model.questions as |question|}}
   <p>{{question.content}}</p>
-  <p>- {{question.author}}</p>
+  <p>Posted by: {{question.author}}</p>
   {{#link-to 'question' question.id}}<button class="btn btn-default">More Details</button>{{/link-to}}
   <hr>
 {{/each}}

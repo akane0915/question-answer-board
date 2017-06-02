@@ -6,6 +6,10 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    updateQuestion(question) {
+      question.save();
+      this.transitionTo('question');
+    },
 
   }
 });
