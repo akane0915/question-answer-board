@@ -1,12 +1,20 @@
-<h2>Help this developer answer the question!</h2>
-<p>{{question.content}}</p>
-<p>Posted by: {{question.author}}</p>
-<p>Notes: {{question.notes}}</p>
+<h2>Help this developer answer the question!</h2><hr>
 
-{{update-question question=question updateQuestion="updateQuestion"}}
+<div class="row">
+  <div class="col-md-6">
+    <h3>{{question.content}}</h3>
+    <p>Posted by: {{question.author}}</p>
+    <p>Notes: {{question.notes}}</p>
 
-{{#each question.answers as |answer|}}
-  <p>{{answer.content}}</p>
-  <p>Posted by: {{answer.author}}</p>
-  <hr>
-{{/each}}
+    {{update-question question=question updateQuestion="updateQuestion"}}
+  </div>
+
+  <div class="col-md-6">
+    <h3>Answers:</h3><br>
+      {{#each question.answers as |answer|}}
+      <p>{{answer.content}}</p>
+      <p>Posted by: {{answer.author}}</p>
+      <hr>
+      {{/each}}
+  </div>
+</div>
