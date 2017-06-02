@@ -16,6 +16,7 @@
       {{#each question.answers as |answer|}}
       <p>{{answer.content}}</p>
       <p>Posted by: {{answer.author}}</p>
+      <button class="btn btn-danger" {{action 'deleteAnswer' answer}}>Delete Answer</button>
       <hr>
       {{/each}}
       {{new-answer saveAnswer="saveAnswer" question=question}}
