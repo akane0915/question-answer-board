@@ -1,6 +1,6 @@
 # _Ask It_
 
-#### _This is an Ember Application Question and Answer Board!  It allows users to submit a question and allows others users to respond with answers.  Let's help all those junior developers out there to become better programmers by creating a method for them to get their questions answered!  June 2, 2017_
+#### _This is a Question and Answer Board built in Ember!  It allows users to submit a question and others users to respond with answers.  Let's help all those junior developers out there to become better programmers by answering their questions!  After all, we all want the world to be a better place, right?  June 2, 2017_
 
 #### By _**Asia Kane**_
 
@@ -10,7 +10,7 @@
 
 As a developer, have you ever found yourself in a situation where you are stuck and need help?  Good news is that the development community is full of people more than willing to lend a hand.  This application makes it convenient and quick for developers to reach out to the development community for help.  It allows the user to submit a coding question and then allows other developers to post answers to that question!
 
-This app is written in Ember with Ember Data stored in Firebase.  Its structure is outlined below:
+This app is written in Ember with Ember Data stored in Firebase.  There is complete CRUD functionality for both Questions and Answers (with the exception of updating an answer).  The application structure is outlined below.  The relationship between Question and Answers is one-to-many.
 
 Models:
   1. Question
@@ -61,9 +61,9 @@ You will need the following things properly installed on your computer.
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-* If you would like to make changes to this project, do so in the text editor
-* Make frequent commits with detailed comments
-* Submit changes as pull request to Asia at akane0915 on Github
+* If you would like to make changes to this project, do so in the text editor.
+* Make frequent commits with detailed comments.
+* Submit changes as pull request to Asia at akane0915 on Github.
 
 ### Running Tests
 
