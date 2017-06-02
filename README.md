@@ -4,8 +4,8 @@
 
 #### By _**Asia Kane**_
 
-![Homepage](/img/homepage.png)
-![Question Page](/img/questionpage.png)
+![Homepage](public/img/homepage.png)
+![Question Page](public/img/questionpage.png)
 
 ## Description
 
