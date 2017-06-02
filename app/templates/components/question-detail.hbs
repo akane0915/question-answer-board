@@ -4,3 +4,9 @@
 <p>Notes: {{question.notes}}</p>
 
 {{update-question question=question updateQuestion="updateQuestion"}}
+
+{{#each question.answers as |answer|}}
+  <p>{{answer.content}}</p>
+  <p>Posted by: {{answer.author}}</p>
+  <hr>
+{{/each}}
