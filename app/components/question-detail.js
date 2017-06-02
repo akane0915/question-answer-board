@@ -8,7 +8,17 @@ export default Ember.Component.extend({
           question.set(key,params[key]);
         }
       });
-      this.sendAction('updateQuestion', question)
+      this.sendAction('updateQuestion', question);
     },
+
+    deleteQuestion(question) {
+      if (confirm('Are you sure you want to delete this question?')) {
+        this.sendAction('destroyQuestion', question);
+      }
+    },
+
+    saveAnswer(params) {
+      this.sendAction('saveAnswer', params);
+    }
   }
 });

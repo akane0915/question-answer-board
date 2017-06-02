@@ -6,7 +6,9 @@
     <p>Posted by: {{question.author}}</p>
     <p>Notes: {{question.notes}}</p>
 
-    {{update-question question=question updateQuestion="updateQuestion"}}
+    {{update-question question=question updateQuestion="updateQuestion"}}<br>
+
+    <button class="btn btn-danger" {{action 'deleteQuestion' question}}>Delete Question</button>
   </div>
 
   <div class="col-md-6">
@@ -16,5 +18,6 @@
       <p>Posted by: {{answer.author}}</p>
       <hr>
       {{/each}}
+      {{new-answer saveAnswer="saveAnswer" question=question}}
   </div>
 </div>
