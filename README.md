@@ -1,7 +1,45 @@
-# ask-it
+# _Ask It_
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### _This is an Ember Application Question and Answer Board!  It allows users to submit a question and allows others users to respond with answers.  Let's help all those junior developers out there to become better programmers by creating a method for them to get their questions answered!  June 2, 2017_
+
+#### By _**Asia Kane**_
+
+![Homepage](img/screenshot.png)
+
+## Description
+
+As a developer, have you ever found yourself in a situation where you are stuck and need help?  Good news is that the development community is full of people more than willing to lend a hand.  This application makes it convenient and quick for developers to reach out to the development community for help.  It allows the user to submit a coding question and then allows other developers to post answers to that question!
+
+This app is written in Ember with Ember Data stored in Firebase.  Its structure is outlined below:
+
+Models:
+  1. Question
+    - Content
+    - Author
+    - Notes
+    - Answers (One to many relationship)
+  2. Answer
+    - Content
+    - Author
+    - Question (One to many relationship)
+
+Router:
+  - router.js
+
+Routes:
+  - Index
+  - Question
+
+Router Handlers:
+  - index.js
+  - question.js
+
+Components:
+  - question-detail (dynamic routing for individual questions)
+  - new-question
+  - update-question
+  - new-answer
+  - update-answer
 
 ## Prerequisites
 
@@ -17,15 +55,15 @@ You will need the following things properly installed on your computer.
 * `git clone <repository-url>` this repository
 * `cd ask-it`
 * `npm install`
+* `bower install`
 
 ## Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* If you would like to make changes to this project, do so in the text editor
+* Make frequent commits with detailed comments
+* Submit changes as pull request to Asia at akane0915 on Github
 
 ### Running Tests
 
@@ -37,14 +75,24 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+## Known Bugs
+_N/A_
 
-Specify what it takes to deploy your app.
+## Support and contact details
+_I encourage you to update/make suggestions/refactor this code as you see fit. I am always open to improvement! Please contact Asia Kane at asialkane@gmail.com with questions._
 
-## Further Reading / Useful Links
+## Technologies Used
+  * JavaScript
+  * Ember
+  * Node
+  * Bower
+  * Firebase
+  * jQuery
+  * CSS
+  * Bootstrap
+  * HTML
+  * ES6
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+  ### License
+  *This software is licensed under the MIT license*
+  Copyright © 2017 **Asia Kane**
