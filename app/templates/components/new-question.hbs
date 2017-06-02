@@ -1,19 +1,23 @@
-<h3>Add a Question Below</h3>
-<div>
-  <form>
-    <div class="form-group">
-      <label for="content">Question:</label>
-      {{textarea class="form-control" value=content id="content"}}
-    </div>
-    <div class="form-group">
-      <label for="author">Author:</label>
-      {{input class="form-control" value=author id="author"}}
-    </div>
-    <div class="form-group">
-      <label for="notes">Notes:</label>
-      {{input class="form-control" value=notes id="notes"}}
-    </div>
+{{#if addNewQuestion}}
+  <h3>Add a Question Below</h3>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="content">Question:</label>
+        {{textarea class="form-control" value=content id="content"}}
+      </div>
+      <div class="form-group">
+        <label for="author">Author:</label>
+        {{input class="form-control" value=author id="author"}}
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes:</label>
+        {{input class="form-control" value=notes id="notes"}}
+      </div>
 
-    <button class="btn btn-default" {{action 'saveQuestion'}}>Save Question</button>
-  </form>
-</div>
+      <button class="btn btn-default" {{action 'saveQuestion'}}>Save Question</button>
+    </form>
+  </div>
+{{else}}
+  <button class="btn btn-default" {{action 'showQuestionForm'}}>Post a Question</button>
+{{/if}}
